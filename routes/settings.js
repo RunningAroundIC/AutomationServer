@@ -47,6 +47,6 @@ router.delete('/delete/:id', function(req, res, next) {
     });
 });
 
-//Get, update og post virker. Delete og get by id ikke testet.
+//Get, update, post og Delete virker 
 
 module.exports = router;
