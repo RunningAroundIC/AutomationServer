@@ -5,10 +5,10 @@ var SettingsSchema = new Schema
 ({
 	appName: String,
 	owner: String,
-	LifX: Boolean,
-	PhillipsHue: Boolean,
-	IkeaTraadFri: Boolean,
-	Custom: Boolean
+	lifX: Boolean,
+	philipsHue: Boolean,
+	ikeaTraadFri: Boolean,
+	custom: Boolean
 });
 
 module.exports = mongoose.model('Settings', SettingsSchema); 

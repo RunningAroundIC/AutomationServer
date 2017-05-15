@@ -9,9 +9,9 @@ var Settings = require('../models/settings.js');
 //Routes
 // GET ALL
 router.get('', function(req, res, next) {
-    Settings.find(function(err, boards) {
+    Settings.find(function(err, settings) {
         if (err) return next(err);
-        res.json(boards);
+        res.json(settings);
     });
 });
 
@@ -33,7 +33,7 @@ router.get('/:id', function(req, res, next) {
 
 // UPDATE
 router.put('/:id', function(req, res, next) {
-    Settings.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
+    Settings.findOneAndUpdate(req.params.id, req.body, function(err, post) {
         if (err) return next(err);
         res.json(post);
     });
